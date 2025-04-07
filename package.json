@@ -4,10 +4,9 @@
   "main": "dist/index.js",
   "scripts": {
     "local": "nodemon --exec ts-node ./index.ts",
-    "start": "ts-node ./index.ts",
-    "dev": "pnpm run build && node ./dist/index.js",
-    "prod": "pnpm run build && node ./dist/index.js",
-    "build": "npx tsc",
+    "start": "npm run build && node ./dist/index.js",
+    "dev": "npm run build && node ./dist/index.js",
+    "build": "npx prisma generate && npx tsc",
     "lint": "eslint . --ext .ts,.js --max-warnings=0",
     "lint:fix": "eslint --fix --ext .js,.ts .",
     "format": "prettier . -w",
