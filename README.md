@@ -37,6 +37,10 @@ A robust Event Management System backend built with Express.js and TypeScript. T
     - Detailed API endpoints documentation
     - Request/response schemas
 
+## ER Diagram
+
+![ER Diagram](./assets/db-schema.png)
+
 ## Local Setup
 
 1. **Prerequisites**
