@@ -3,16 +3,15 @@ import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import http from 'http'
 import cors from 'cors'
-import { loadConfig } from './app/common/helper/config.helper'
 import errorHandler from './app/common/middleware/error-handler.middleware'
 import { initPassport } from './app/common/services/passport-jwt.service'
 import routes from './app/route'
 import swaggerUI from 'swagger-ui-express'
 import swaggerDocument from './swagger.json'
 import { IUser } from './app/user/user.dto'
+import dotenv from 'dotenv'
 
-loadConfig()
-
+dotenv.config()
 declare global {
     namespace Express {
         interface User extends Omit<IUser, 'password'> {}
